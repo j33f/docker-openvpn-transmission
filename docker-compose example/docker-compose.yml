@@ -2,7 +2,7 @@ version: "2"
 
 services:
   transmission:
-    image: j33f/transmission-openvpn:latest
+    image: j33f/openvpn-transmission:latest
     container_name: transmission
     privileged: true
     restart: always
