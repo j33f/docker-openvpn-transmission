@@ -4,21 +4,21 @@
 
 ## Usage 
 
-The best way to use this container is to use it with docker-compose (see [docker-compose example](./docker-compose%20example))
+The best way to use this container is to use it with docker-compose (see [docker-compose example](https://github.com/j33f/docker-openvpn-transmission/blob/master/docker-compose%20example))
 
 Read the docker-compose.yml file and edit it following your needs:
-- [#22](././docker-compose%20example/docker-compose.yml#L22): set the path to your .ovpn file (containing the certificates)
-- [#23](././docker-compose%20example/docker-compose.yml#L23): set the path where all the torrents folders will be:
+- [#22](https://github.com/j33f/docker-openvpn-transmission/blob/master/docker-compose%20example/docker-compose.yml#L22): set the path to your .ovpn file (containing the certificates)
+- [#23](https://github.com/j33f/docker-openvpn-transmission/blob/master/docker-compose%20example/docker-compose.yml#L23): set the path where all the torrents folders will be:
     - /downloads
     - /incomplete
     - /watch
-- [#24](././docker-compose%20example/docker-compose.yml#L24): set the path to your own transmission settings.json file (there is one under the [settings folder](./settings) /!\ read below)
+- [#24](https://github.com/j33f/docker-openvpn-transmission/blob/master/docker-compose%20example/docker-compose.yml#L24): set the path to your own transmission settings.json file (there is one under the [settings folder](https://github.com/j33f/docker-openvpn-transmission/blob/master/settings) /!\ read below)
 
 The [settings folder](./settings) contains:
 - a ready to use nginx.conf file (you may consider to change the ```listen 8080``` line to another port)
 - an editable settings file for transmission
     - /!\ do not edit the ```#bind-address-ipv4#``` placeholder!
-    - set a user name and password at lines [#46](./settings/transmission.json#L46) and [#47](./settings/transmission.json#L47)
+    - set a user name and password at lines [#46](https://github.com/j33f/docker-openvpn-transmission/blob/master/settings/transmission.json#L46) and [#47](https://github.com/j33f/docker-openvpn-transmission/blob/master/settings/transmission.json#L47)
     - /!\ read [the Transmission settings documentation prior to tweak](https://github.com/transmission/transmission/wiki/Editing-Configuration-Files)
 
 ### First launch
