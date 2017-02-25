@@ -19,6 +19,7 @@ The [settings folder](./settings) contains:
 - an editable settings file for transmission
     - /!\ do not edit the ```#bind-address-ipv4#``` placeholder!
     - set a user name and password at lines [#46](./settings/transmission.json#L46) and [#47](./settings/transmission.json#L47)
+    - /!\ read [the Transmission settings documentation prior to tweak](https://github.com/transmission/transmission/wiki/Editing-Configuration-Files)
 
 ### First launch
 
