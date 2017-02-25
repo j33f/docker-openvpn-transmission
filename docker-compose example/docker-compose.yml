@@ -1,0 +1,40 @@
+version: "2"
+
+services:
+  transmission:
+    image: j33f/transmission-openvpn:dev
+    container_name: transmission
+    privileged: true
+    restart: always
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    ports:
+      - 9091:9091
+      - 51413:51413
+      - 51413:51413/udp
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /path/to/your/vpn/configuration/file.ovpn:/conf.ovpn
+      - /path/to/where/the/torrents/will/be/stored:/storage
+      - /optional/path/to/your/custom/settings/file/for/transmission.json:/transmission/settings.json
+    environment:
+      - OVPNUSERNAME=CHANGE ME
+      - OVPNPASSWORD=CHANGE ME
+
+  transmissionproxy:
+    image: nginx:alpine
+    container_name: transmissionproxy
+    depends_on:
+      - transmission
+    links:
+      - transmission
+    ports:
+      - 8080:8080
+    volumes:
+      - /path/to/the/nginix.conf:/etc/nginx/nginx.conf
+
