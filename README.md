@@ -1,7 +1,7 @@
 # Docker container for Transmission via openvnp
 
 This a 5MB alpine based container including Tranmission torrent client and OpenVPN client to be used via docker-compose.
-It has been mate to be used with .ovpn files including certificates (like ones given by ExpressVPN).
+It has been made to be used with .ovpn files including certificates (like ones given by ExpressVPN).
 
 ## Usage 
 
